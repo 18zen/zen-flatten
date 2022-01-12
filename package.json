@@ -1,0 +1,27 @@
+{
+    "name": "zen-flatten",
+    "version": "1.0.0",
+    "description": "---",
+    "repository": "https://github.com/18zen/zen-flatten",
+    "author": "18zen",
+    "license": "MIP",
+    "devDependencies": {
+        "@babel/core": "^7.16.7",
+        "@babel/preset-env": "^7.16.7",
+        "@babel/preset-typescript": "^7.16.7",
+        "@types/jest": "^27.4.0",
+        "babel-jest": "^27.4.6",
+        "jest": "^27.4.7",
+        "typescript": "^4.5.4"
+    },
+    "scripts": {
+        "build": "yarn build:esm && yarn build:cjs",
+        "build:esm": "tsc",
+        "build:cjs": "tsc --module commonjs --outDir lib/cjs",
+        "build-fs": "node src/build.js",
+        "test": "jest"
+    },
+    "main": "./lib/cjs/index.js",
+    "module": "./lib/esm/index.js",
+    "types": "./lib/esm/index.d.ts"
+}
